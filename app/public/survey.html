@@ -9,13 +9,15 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container">
-	<input type="text" class="form-control" id="name" placeholder="Your name">
-	<input type="text" class="form-control" id="photo" placeholder="Insert link to photo">
-</div>
 
 <div class="container">
-	<h2>This is where the questions will go</h2>
+	<h2>Friend Finder Questionnaire</h2>
+	<br>
+	<div class="container">
+		<input type="text" class="form-control" id="name" placeholder="Your name">
+		<input type="text" class="form-control" id="photo" placeholder="Insert link to photo">
+	</div>
+	<br>
 	<form>
 	    <div class="form-group">
 	      <label for="sel1">You see yourself as grounded and more responsible than your family members.</label>
@@ -77,13 +79,10 @@
 	  	</div>
 	</form>
 	<button class="submit-btn" type="submit">Find your best match!</button>
-</div>
 
-<!-- to do
-//when user submits form..
-	- answer choices are converted to integers and added together
-	- compare score results with friends score
- -->
+	<div class="container result"></div>
+
+</div>
 
 <script type="text/javascript">
 $(".submit-btn").on("click", function(){
@@ -98,6 +97,14 @@ $(".submit-btn").on("click", function(){
 	userAnswers.push(q2);
 	var q3 = $("#sel3").val();
 	userAnswers.push(q3);
+	var q4 = $("#sel4").val();
+	userAnswers.push(q4);
+	var q5 = $("#sel5").val();
+	userAnswers.push(q5);
+	var q6 = $("#sel6").val();
+	userAnswers.push(q6);
+	var q7 = $("#sel7").val();
+	userAnswers.push(q7);
 
 	var newFriend = {
 		"name": $("#name").val().trim(),
@@ -106,31 +113,7 @@ $(".submit-btn").on("click", function(){
 	};
 	console.log(newFriend);
 
-	/*/$.post("/api/friends", newFriend, function(data){
-
-	});*/
-
-
-	/*function submitAnswer(){
-		var choices = $(".form-control:checked").val();
-
-		//var checked = false;
-		var userScore;
-
-		for (i = 0; i < choices.length; i++){
-			friends.numbers.push(choices);
-		} // end of loop for answer choices
-
-		if (userScore === friends[i].score){
-			$.get("/api/" + friends[i].score, function(data){
-				console.log(data);
-
-			})
-		}
-	} // end of submitAnswer function */
-
-
-})
+});
 
 
 

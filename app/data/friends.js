@@ -1,4 +1,3 @@
-//add photos
 
 var friends = [{
 	"name": "Michael Bluth",

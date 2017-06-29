@@ -1,0 +1,28 @@
+.myJumbotron {
+	background-color: #e7732f;
+	color: white;
+	text-align: center;
+}
+
+h1 {
+	font-family: "Antique Olive";
+	font-weight: 900;
+	letter-spacing: .001px;
+	text-align: center;
+}
+
+
+h2 {
+	font-family: "FF Blur";
+	font-weight: 900;
+	letter-spacing: .001em;
+	text-align: center;
+	color: #000;
+}
+
+.play {
+	
+	font-family: "Monaco";
+	letter-spacing: .001px;
+	font-size: 13px;
+}
