@@ -9,31 +9,70 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
+<div class="container">
+	<input type="text" class="form-control" id="name" placeholder="Your name">
+	<input type="text" class="form-control" id="photo" placeholder="Insert link to photo">
+</div>
 
 <div class="container">
 	<h2>This is where the questions will go</h2>
 	<form>
 	    <div class="form-group">
-	      <label for="sel1">You see yourself as grounded and more responsible than your family members (select one):</label>
+	      <label for="sel1">You see yourself as grounded and more responsible than your family members.</label>
 	      <select class="form-control" id="sel1">
 	        <option>1</option>
 	        <option>2</option>
 	        <option>3</option>
 	        <option>4</option>
+	        <option>5</option>
 	      </select>
-	      <label for="sel2">You love to be the center of attention (select one):</label>
+	      <label for="sel2">You love to be the center of attention.</label>
 	      <select class="form-control" id="sel2">
 	        <option>1</option>
 	        <option>2</option>
 	        <option>3</option>
 	        <option>4</option>
+	        <option>5</option>
 	      </select>
-	      <label for="sel3">You have attachment issues because of your mother (select one):</label>
+	      <label for="sel3">You have a close relationship with your mother.</label>
 	      <select class="form-control" id="sel3">
 	        <option>1</option>
 	        <option>2</option>
 	        <option>3</option>
 	        <option>4</option>
+	        <option>5</option>
+	      </select>
+	      <label for="sel4">Seals make you uneasy.</label>
+	      <select class="form-control" id="sel4">
+	        <option>1</option>
+	        <option>2</option>
+	        <option>3</option>
+	        <option>4</option>
+	        <option>5</option>
+	      </select>
+	      <label for="sel5">You're a control freak.</label>
+	      <select class="form-control" id="sel5">
+	        <option>1</option>
+	        <option>2</option>
+	        <option>3</option>
+	        <option>4</option>
+	        <option>5</option>
+	      </select>
+	      <label for="sel6">You often feel like your family doesn't understand you.</label>
+	      <select class="form-control" id="sel6">
+	        <option>1</option>
+	        <option>2</option>
+	        <option>3</option>
+	        <option>4</option>
+	        <option>5</option>
+	      </select>
+	      <label for="sel7">You have no problem spending large amounts of money.</label>
+	      <select class="form-control" id="sel7">
+	        <option>1</option>
+	        <option>2</option>
+	        <option>3</option>
+	        <option>4</option>
+	        <option>5</option>
 	      </select>
 	  	</div>
 	</form>
@@ -47,9 +86,32 @@
  -->
 
 <script type="text/javascript">
-$("#submit-btn").on("click", function(){
+$(".submit-btn").on("click", function(){
+	console.log("hi");
 
-	function submitAnswer(){
+
+	userAnswers = [];
+
+	var q1 = $("#sel1").val();
+	userAnswers.push(q1);
+	var q2 = $("#sel2").val();
+	userAnswers.push(q2);
+	var q3 = $("#sel3").val();
+	userAnswers.push(q3);
+
+	var newFriend = {
+		"name": $("#name").val().trim(),
+		"photo": $("#photo").val(),
+		"numbers": userAnswers
+	};
+	console.log(newFriend);
+
+	/*/$.post("/api/friends", newFriend, function(data){
+
+	});*/
+
+
+	/*function submitAnswer(){
 		var choices = $(".form-control:checked").val();
 
 		//var checked = false;
@@ -65,7 +127,7 @@ $("#submit-btn").on("click", function(){
 
 			})
 		}
-	} // end of submitAnswer function
+	} // end of submitAnswer function */
 
 
 })

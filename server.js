@@ -5,11 +5,17 @@ var path = require("path");
 var app = express();
 var PORT = process.env.PORT || 3000;
 
+var friends = require("./app/data/friends");
+var survey = require("./app/public/home.html")
 
 //html routes
 app.get("/", function (req, res){
 	console.log("getting home page", req.params.page)
 	res.sendFile(path.join(__dirname, "app/public/home.html"))
+});
+
+app.get("/survey", function(req, res){
+	res.sendFile(path.join(__dirname, "app/public/survey.html"))
 });
 
 
@@ -29,13 +35,15 @@ app.get("/api/:friends?", function(req, res){
 })*/
 
 // create new friend
-app.post("/api/new", function(req, res){
+app.post("/api/friends", function(req, res){
 	//req.body is equal to the json post sent from the user
-	var newfriend = req.body;
+	var newfriend = req.body.newFriend;
 	//add the json the user sent to the friends array
 	friends.push(newfriend);
 	//
-})
+});
+
+console.log(friends);
 
 
 
