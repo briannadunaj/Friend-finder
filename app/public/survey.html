@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
 </head>
 <body>
 
@@ -80,43 +81,7 @@
 	</form>
 	<button class="submit-btn" type="submit">Find your best match!</button>
 
-	<div class="container result"></div>
-
 </div>
 
-<script type="text/javascript">
-$(".submit-btn").on("click", function(){
-	console.log("hi");
-
-
-	userAnswers = [];
-
-	var q1 = $("#sel1").val();
-	userAnswers.push(q1);
-	var q2 = $("#sel2").val();
-	userAnswers.push(q2);
-	var q3 = $("#sel3").val();
-	userAnswers.push(q3);
-	var q4 = $("#sel4").val();
-	userAnswers.push(q4);
-	var q5 = $("#sel5").val();
-	userAnswers.push(q5);
-	var q6 = $("#sel6").val();
-	userAnswers.push(q6);
-	var q7 = $("#sel7").val();
-	userAnswers.push(q7);
-
-	var newFriend = {
-		"name": $("#name").val().trim(),
-		"photo": $("#photo").val(),
-		"numbers": userAnswers
-	};
-	console.log(newFriend);
-
-});
-
-
-
-</script>
 </body>
 </html>

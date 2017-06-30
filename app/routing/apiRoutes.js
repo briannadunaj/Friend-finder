@@ -15,9 +15,10 @@ module.exports = function(app){
 
 	//console.log(friendsData);
 
+
 	// code to compare numbers
 	// loop through friends array
-	for (var i = 0; i < friendsData.length - 1; i++){
+/*/	for (var i = 0; i < friendsData.length - 1; i++){
 		//console.log(friendsData[i].numbers);
 
 		//loop through each 'numbers' array 
@@ -28,6 +29,6 @@ module.exports = function(app){
 			console.log(difference);
 		}
 	}
-
+/*/
 
 }
