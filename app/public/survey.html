@@ -25,72 +25,78 @@
 	    <div class="form-group">
 	      <label for="sel1">You see yourself as grounded and more responsible than your family members.</label>
 	      <select class="form-control" id="sel1">
-	        <option>1</option>
+	        <option>1 (Strongly Disagree)</option>
 	        <option>2</option>
 	        <option>3</option>
 	        <option>4</option>
-	        <option>5</option>
+	        <option>5 (Strongly Agree)</option>
 	      </select>
+	      <br>
 	      <label for="sel2">You love to be the center of attention.</label>
 	      <select class="form-control" id="sel2">
-	        <option>1</option>
+	        <option>1 (Strongly Disagree)</option>
 	        <option>2</option>
 	        <option>3</option>
 	        <option>4</option>
-	        <option>5</option>
+	        <option>5 (Strongly Agree)</option>
 	      </select>
+	      <br>
 	      <label for="sel3">You have a close relationship with your mother.</label>
 	      <select class="form-control" id="sel3">
-	        <option>1</option>
+	        <option>1 (Strongly Disagree)</option>
 	        <option>2</option>
 	        <option>3</option>
 	        <option>4</option>
-	        <option>5</option>
+	        <option>5 (Strongly Agree)</option>
 	      </select>
+	      <br>
 	      <label for="sel4">Seals make you uneasy.</label>
 	      <select class="form-control" id="sel4">
-	        <option>1</option>
+	        <option>1 (Strongly Disagree)</option>
 	        <option>2</option>
 	        <option>3</option>
 	        <option>4</option>
-	        <option>5</option>
+	        <option>5 (Strongly Agree)</option>
 	      </select>
+	      <br>
 	      <label for="sel5">You're a control freak.</label>
 	      <select class="form-control" id="sel5">
-	        <option>1</option>
+	        <option>1 (Strongly Disagree)</option>
 	        <option>2</option>
 	        <option>3</option>
 	        <option>4</option>
-	        <option>5</option>
+	        <option>5 (Strongly Agree)</option>
 	      </select>
+	      <br>
 	      <label for="sel6">You often feel like your family doesn't understand you.</label>
 	      <select class="form-control" id="sel6">
-	        <option>1</option>
+	        <option>1 (Strongly Disagree)</option>
 	        <option>2</option>
 	        <option>3</option>
 	        <option>4</option>
-	        <option>5</option>
+	        <option>5 (Strongly Agree)</option>
 	      </select>
+	      <br>
 	      <label for="sel7">You have no problem spending large amounts of money.</label>
 	      <select class="form-control" id="sel7">
-	        <option>1</option>
+	        <option>1 (Strongly Disagree)</option>
 	        <option>2</option>
 	        <option>3</option>
 	        <option>4</option>
-	        <option>5</option>
+	        <option>5 (Strongly Agree)</option>
 	      </select>
 	  	</div>
-	</form>
-	<button class="submit-btn" type="submit" data-toggle="modal" data-target="#myModal">Find your best match!</button>
+	
+	<button class="submit-btn" type="submit" data-toggle="modal" data-target="#myModal">Find your match!</button>
 	<div id="myModal" class="modal fade" role="dialog">
 	  <div class="modal-dialog">
 	      <div class="modal-content">
 	        <div class="modal-header">
 	          <button type="button" class="close" data-dismiss="modal">&times;</button>
-	          <h4 class="modal-title">Modal Header</h4>
+	          <h4 class="modal-title">Your best friend is:</h4>
 	        </div>
 	        <div class="modal-body">
-	          <p>Some text in the modal.</p>
+	          <p id="text"></p>
 	        </div>
 	        <div class="modal-footer">
 	          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -99,8 +105,9 @@
 
 	    </div>
 	  </div>
-	
+	</form>
 </div>
+
 
 </body>
 </html>

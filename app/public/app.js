@@ -25,15 +25,13 @@ $(document).ready(function(){
 		};
 		console.log(newFriend);
 
-/*		$.post("/api/friends", newFriend, function(){
-			q1 = 0, q2 = 0, q3 = 0, q4 = 0, q5 = 0, q6 = 0, q7 = 0;
-		}).then(function(match){
-			var parsed = JSON.parse(match);
-			console.log(parsed);
-			
-		}); */
-		//console.log(parsed);
-		// add modal pop-up with result
+		var url = window.location.origin;
+
+		$.get(url+"/api/friends", function(data){
+			var ya = JSON.stringify(data);
+			console.log(ya);
+			$("#text").text(data[name]);
+		});
 
 	});
 

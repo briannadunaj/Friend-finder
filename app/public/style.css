@@ -26,3 +26,18 @@ h2 {
 	letter-spacing: .001px;
 	font-size: 13px;
 }
+
+form {
+	text-align: center;
+}
+
+body {
+	background-color: #e7732f;
+}
+
+.submit-btn{
+	padding: 20px;
+	margin: 20px 0px 20px 0;
+	font-family: "Arial";
+	font-size: 20px;
+}
